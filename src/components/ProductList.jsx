@@ -16,7 +16,9 @@ function ProductList() {
 
     return (
       <div className='flex-row' style={{flexWrap :"wrap"}}>
+        
         {products && products.map((product) => (
+          
             <Product key={product.id} product={product} />
         ))}
       </div>

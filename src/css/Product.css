@@ -18,8 +18,13 @@
     cursor: pointer;
 }
 
+
 .detail-button{
     border: none;
     padding: 10px;
     border-radius: 5px;
+}
+.detail-button:hover{
+    background-color: blanchedalmond;
+    transition: all 0.1s;
 }

@@ -14,11 +14,16 @@ export const getAllProducts = createAsyncThunk("getAllProducts", async () => {
   const response = await axios.get(BASE_URL + "/products");
   return response.data;
 });
-
 export const productSlice = createSlice({
   name: "product",
   initialState,
-  reducers: {},
+  reducers: {
+    setSelectedProduct : (state , action)=> {
+      
+      state.selectedProduct = { ...action.payload }; 
+      
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getAllProducts.pending, (state) => {
@@ -35,5 +40,7 @@ export const productSlice = createSlice({
       });
   },
 });
+
+export const {setSelectedProduct} = productSlice.actions;
 
 export default productSlice.reducer;

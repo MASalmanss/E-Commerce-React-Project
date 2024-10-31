@@ -3,6 +3,9 @@
     font-size: 15px;
     font-weight: 600;
 }
+.logo-text:hover{
+    cursor: pointer;
+}
 
 .search-input{
     border: none;

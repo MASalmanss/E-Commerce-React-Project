@@ -3,10 +3,12 @@ import "../css/Header.css"
 import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { IoMoonOutline } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 
 
 function Header() {
   const [theme, setTheme] = useState(false);
+  const navigate = useNavigate()
 
   const changeTheme = () => {
     const root = document.getElementById("root");
@@ -24,7 +26,7 @@ function Header() {
   return (
     <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
       <div className='flex-row'>
-        <p className='logo-text'>Mehmet Akif Salman</p>
+        <p className='logo-text' onClick={()=>{ navigate("/")}}>Mehmet Akif Salman</p>
       </div>
 
       <div className='flex-row'>
